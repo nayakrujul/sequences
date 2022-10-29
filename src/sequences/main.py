@@ -277,3 +277,9 @@ def run(code, _stack=(), _lst=()):
                 stack.push(code[index])
         index += 1
     return stack, lst
+
+def from_cmdline():
+    code = input('Code: ')
+    out = run(code)[0]
+    print('\nOutput')
+    print(out)
