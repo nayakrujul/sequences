@@ -4,13 +4,13 @@ long_description = 'A very concise language - read the docs at https://www.githu
 
 setup(
   name = 'sequences-lang',
-  version = '1.1',
+  version = '1.2',
   license='Apache',
   description = 'A very concise language',
   author = 'Rujul Nayak',
   author_email = 'rujulnayak@outlook.com',
   url = 'https://github.com/nayakrujul/sequences-lang',
-  download_url = 'https://github.com/nayakrujul/sequences-lang/archive/refs/tags/v10.tar.gz',
+  download_url = 'https://github.com/nayakrujul/sequences-lang/archive/refs/tags/v12.tar.gz',
   keywords = ['golfing', 'code-golf', 'language'],
   install_requires=[
       ],
