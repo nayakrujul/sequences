@@ -1,0 +1,3 @@
+[console_scripts]
+sequences = sequences.main:from_cmdline
+

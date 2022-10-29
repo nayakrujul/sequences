@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+sequences/List.py
+sequences/__init__.py
+sequences/main.py
+sequences_lang.egg-info/PKG-INFO
+sequences_lang.egg-info/SOURCES.txt
+sequences_lang.egg-info/dependency_links.txt
+sequences_lang.egg-info/entry_points.txt
+sequences_lang.egg-info/top_level.txt

@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: sequences-lang
+Version: 1.0
+Summary: A very concise language
+Home-page: https://github.com/nayakrujul/sequences-lang
+Author: Rujul Nayak
+Author-email: rujulnayak@outlook.com
+License: Apache
+Download-URL: https://github.com/nayakrujul/sequences-lang/archive/refs/tags/v10.tar.gz
+Keywords: golfing,code-golf,language
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/x-rst
+
+A very concise language - read the docs at https://www.github.com/nayakrujul/sequences
+
