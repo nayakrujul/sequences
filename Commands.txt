@@ -1,0 +1,75 @@
+List of Commands in Sequences
+
+Inputs:
+  i = integer input
+  I = list of integer input
+  t = string input
+  T = list of string input
+
+Lists:
+  S = sum the list
+  P = product of the list
+  M = maximum value
+  m = minimum value
+  G = GCD
+  L = LCM
+  A = append to the list
+  C = concatenate two lists
+  R = reverse a list or string
+  D = remove duplicates from the list
+  J = join a list by a string
+  W = convert all elements of a list to string
+  N = convert all elements of a list to integer
+  o = remove the first occurence of an item from a list
+  O = remove all occurrences of an item from a list
+  X = range(0, len(list or string))
+
+Strings:
+  p = split a string by another string
+  w = convert to string
+  R = reverse a list or string
+  X = range(0, len(list or string))
+  
+Integers:
+  n = convert to integer
+  x = range(0, num)
+  + = addition
+  - = subtractiob
+  * = multiplication
+  / = division
+  ^ = exponentiation
+  % = modulus
+  D = divmod
+  
+Comparisons:
+  > = >
+  q = >=
+  < = <
+  Q = <=
+  = = ==
+  p = !=
+
+Logic:
+  & = and
+  | = or
+  @ = xor
+  ~ = not
+  
+Others:
+  a = lowercase alphabet
+  Z = uppercase alphabet
+  j = ljust
+  y = rjust
+  B = convert to base (int)
+  b = convert to base (str)
+  d = convert from base (int)
+  f = print (no newline)
+  F = print
+  E = infinite sequence
+  
+Stacks:
+  s = push stack
+  g = push sequence list
+  h = push last item in sequence list
+  H = append to sequence list
+  
