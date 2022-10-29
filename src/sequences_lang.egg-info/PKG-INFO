@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: sequences-lang
-Version: 1.1
+Version: 1.2
 Summary: A very concise language
 Home-page: https://github.com/nayakrujul/sequences-lang
 Author: Rujul Nayak
 Author-email: rujulnayak@outlook.com
 License: Apache
-Download-URL: https://github.com/nayakrujul/sequences-lang/archive/refs/tags/v10.tar.gz
+Download-URL: https://github.com/nayakrujul/sequences-lang/archive/refs/tags/v12.tar.gz
 Keywords: golfing,code-golf,language
 Platform: UNKNOWN
 Classifier: Development Status :: 3 - Alpha
