@@ -218,7 +218,7 @@ def run(code, _stack=(), _lst=()):
                 stack.push(code[index])
         elif char == 'a':
             stack.push(ascii_lowercase)
-        elif char == 'J':
+        elif char == 'Z':
             stack.push(ascii_uppercase)
         elif char == 'j':
             a, b = stack.first(str, n=2)
