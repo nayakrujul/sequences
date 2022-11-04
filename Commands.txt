@@ -30,6 +30,7 @@ Strings:
   w = convert to string
   R = reverse a list or string
   X = range(0, len(list or string))
+  v = ord(char)
   
 Integers:
   n = convert to integer
@@ -41,6 +42,7 @@ Integers:
   ^ = exponentiation
   % = modulus
   D = divmod
+  V = chr(num)
   
 Comparisons:
   > = >
