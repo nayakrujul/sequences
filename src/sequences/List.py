@@ -14,11 +14,11 @@ class List(list):
     def first(self, types, b=True, n=1):
         f = self._first(types, b, n)
         while len(f) < n:
-            if (types == str) or (str in types):
+            if (types == str) or (isinstance(types, type) and (str in types)):
                 i = input()
                 f.insert(0, i)
                 self.push(i)
-            elif (types == list) or (list in types):
+            elif (types == list) or (isinstance(types, type) and (list in types)):
                 i = input().split()
                 f.insert(0, i)
                 self.push(i)
