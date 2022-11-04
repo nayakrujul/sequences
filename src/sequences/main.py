@@ -210,7 +210,19 @@ def run(code, _stack=(), _lst=()):
                     index += 1
             except:
                 pass
-            a = stack.first((list, str))
+            a = stack.first(str)
+            for i in a:
+                stack, lst = run(string, [i] + stack, lst)
+        elif char == '[':
+            string = ''
+            index += 1
+            try:
+                while code[index] != ']':
+                    string += code[index]
+                    index += 1
+            except:
+                pass
+            a = stack.first(list)
             for i in a:
                 stack, lst = run(string, [i] + stack, lst)
         elif char == '\\':
