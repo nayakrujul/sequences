@@ -1,5 +1,6 @@
 from math import *
 from string import *
+import statistics
 from sequences.List import List
 
 def numberToBase(n, b):
@@ -67,6 +68,8 @@ def run(code, _stack=(), _lst=()):
             stack.push(gcd(stack.first(list)))
         elif char == 'L':
             stack.push(lcm(stack.first(list)))
+        elif char == 'a':
+            stack.push(statistics.mean(stack.first(list) or [0]))
         elif char == 'l':
             stack.push([])
         elif char == 'A':
@@ -280,6 +283,7 @@ def run(code, _stack=(), _lst=()):
 
 def from_cmdline():
     code = input('Code: ')
-    out = run(code)[0]
-    print('\nOutput')
-    print(out)
+    s, l = run(code)
+    print('\nOutput:')
+    print(s[0])
+    print(l)
