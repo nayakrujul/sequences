@@ -13,6 +13,7 @@ Lists:
   m = minimum value
   G = GCD
   L = LCM
+  a = average of the list
   A = append to the list
   C = concatenate two lists
   R = reverse a list or string
