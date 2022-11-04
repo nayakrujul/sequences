@@ -273,6 +273,10 @@ def run(code, _stack=(), _lst=()):
             stack.push(lst[-1])
         elif char == 'H':
             lst.append(stack[0])
+        elif char == 'v':
+            stack.push(ord(stack.first(str)))
+        elif char == 'V':
+            stack.push(chr(stack.first(int)))
         else:
             if isinstance(stack[0], str):
                 stack[0] += code[index]
