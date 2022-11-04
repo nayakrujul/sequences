@@ -4,7 +4,7 @@ long_description = 'A very concise language - read the docs at https://www.githu
 
 setup(
   name = 'sequences-lang',
-  version = '1.6',
+  version = '1.7',
   license='Apache',
   description = 'A very concise language',
   author = 'Rujul Nayak',
