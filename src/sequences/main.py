@@ -12,7 +12,7 @@ def numberToBase(n, b):
         n //= b
     return digits[::-1]
 
-def run(code, _stack=(), _lst=()):
+def run(code, _stack=(), _lst=(), u=None):
     index = 0
     stack = List(_stack)
     lst = List(_lst)
@@ -198,9 +198,9 @@ def run(code, _stack=(), _lst=()):
             except:
                 pass
             if stack[0]:
-                stack, lst = run(if_true, stack, lst)
+                stack, lst = run(if_true, stack, lst, u)
             else:
-                stack, lst = run(if_false, stack, lst)
+                stack, lst = run(if_false, stack, lst, u)
         elif char == '{':
             string = ''
             index += 1
@@ -212,7 +212,7 @@ def run(code, _stack=(), _lst=()):
                 pass
             a = stack.first(str)
             for i in a:
-                stack, lst = run(string, [i] + stack, lst)
+                stack, lst = run(string, [i] + stack, lst, u)
         elif char == '[':
             string = ''
             index += 1
@@ -224,7 +224,7 @@ def run(code, _stack=(), _lst=()):
                 pass
             a = stack.first(list)
             for i in a:
-                stack, lst = run(string, [i] + stack, lst)
+                stack, lst = run(string, [i] + stack, lst, u)
         elif char == '\\':
             index += 1
             if isinstance(stack[0], str):
@@ -272,12 +272,12 @@ def run(code, _stack=(), _lst=()):
             a = stack.first((list, str))
             l = []
             for i in a:
-                stack, lst = run(string, [i] + stack, lst)
+                stack, lst = run(string, [i] + stack, lst, u)
                 l.append(stack[0])
             stack.push(l)
         elif char == 'E':
             while 1:
-                stack, lst = run(code[index+1:], stack, lst)
+                stack, lst = run(code[index+1:], stack, lst, u)
                 print(stack[0])
         elif char == 'g':
             stack.push(list(lst).copy())
@@ -289,6 +289,10 @@ def run(code, _stack=(), _lst=()):
             stack.push(ord(stack.first(str)))
         elif char == 'V':
             stack.push(chr(stack.first(int)))
+        elif char == 'U':
+            u = stack[0]
+        elif char == 'u':
+            stack.push(u)
         else:
             if isinstance(stack[0], str):
                 stack[0] += code[index]
