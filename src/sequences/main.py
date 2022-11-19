@@ -83,7 +83,10 @@ def run(code, _stack=(), _lst=(), u=None, _inputs=()):
         elif char == 'A':
             stack.push(stack.first(list) + [stack.first(list, False)])
         elif char == 'C':
-            a, b = stack.first(list, n=2)
+            b, a = stack.first(list, n=2)
+            stack.push(a + b)
+        elif char == '_':
+            b, a = stack.first(str, n=2)
             stack.push(a + b)
         elif char == 'R':
             a = stack.first((list, str))
