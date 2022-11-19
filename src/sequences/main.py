@@ -203,9 +203,9 @@ def run(code, _stack=(), _lst=(), u=None, _inputs=()):
             except:
                 pass
             if stack[0]:
-                stack, lst = run(if_true, stack, lst, u)
+                stack, lst = run(if_true, stack, lst, u, inputs)
             else:
-                stack, lst = run(if_false, stack, lst, u)
+                stack, lst = run(if_false, stack, lst, u, inputs)
         elif char == '{':
             string = ''
             index += 1
@@ -217,7 +217,7 @@ def run(code, _stack=(), _lst=(), u=None, _inputs=()):
                 pass
             a = stack.first(str)
             for i in a:
-                stack, lst = run(string, [i] + stack, lst, u)
+                stack, lst = run(string, [i] + stack, lst, u, inputs)
         elif char == '[':
             string = ''
             index += 1
@@ -229,7 +229,7 @@ def run(code, _stack=(), _lst=(), u=None, _inputs=()):
                 pass
             a = stack.first(list)
             for i in a:
-                stack, lst = run(string, [i] + stack, lst, u)
+                stack, lst = run(string, [i] + stack, lst, u, inputs)
         elif char == '\\':
             index += 1
             if isinstance(stack[0], str):
@@ -277,12 +277,12 @@ def run(code, _stack=(), _lst=(), u=None, _inputs=()):
             a = stack.first((list, str))
             l = []
             for i in a:
-                stack, lst = run(string, [i] + stack, lst, u)
+                stack, lst = run(string, [i] + stack, lst, u, inputs)
                 l.append(stack[0])
             stack.push(l)
         elif char == 'E':
             while 1:
-                stack, lst = run(code[index+1:], stack, lst, u)
+                stack, lst = run(code[index+1:], stack, lst, u, inputs)
                 print(stack[0])
         elif char == 'g':
             stack.push(list(lst).copy())
