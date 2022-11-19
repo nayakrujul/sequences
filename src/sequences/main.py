@@ -12,10 +12,11 @@ def numberToBase(n, b):
         n //= b
     return digits[::-1]
 
-def run(code, _stack=(), _lst=(), u=None):
+def run(code, _stack=(), _lst=(), u=None, _inputs=()):
     index = 0
     stack = List(_stack)
     lst = List(_lst)
+    inputs = List(_inputs)
     while index < len(code):
         char = code[index]
         if char in '0123456789.':
@@ -48,12 +49,16 @@ def run(code, _stack=(), _lst=(), u=None):
             stack.push(eval(string))
         elif char == 'i':
             stack.push(int(input()))
+            inputs.push(stack[0])
         elif char == 'I':
             stack.push(list(map(int, input().split())))
+            inputs.push(stack[0])
         elif char == 't':
             stack.push(input())
+            inputs.push(stack[0])
         elif char == 'T':
             stack.push(input().split())
+            inputs.push(stack[0])
         elif char == 's':
             stack.push(list(stack).copy())
         elif char == 'S':
@@ -293,6 +298,10 @@ def run(code, _stack=(), _lst=(), u=None):
             u = stack[0]
         elif char == 'u':
             stack.push(u)
+        elif char == '(':
+            stack.push(list(inputs).copy())
+        elif char == ')':
+            stack.push(inputs[0])
         else:
             if isinstance(stack[0], str):
                 stack[0] += code[index]
