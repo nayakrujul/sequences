@@ -13,7 +13,7 @@ Lists:
   m = minimum value
   G = GCD
   L = LCM
-  a = average of the list
+  k = average of the list
   A = append to the list
   C = concatenate two lists
   R = reverse a list or string
@@ -26,7 +26,7 @@ Lists:
   X = range(0, len(list or string))
 
 Strings:
-  p = split a string by another string
+  r = split a string by another string
   w = convert to string
   R = reverse a list or string
   X = range(0, len(list or string))
@@ -41,7 +41,7 @@ Integers:
   / = division
   ^ = exponentiation
   % = modulus
-  D = divmod
+  K = divmod
   V = chr(num)
   
 Comparisons:
