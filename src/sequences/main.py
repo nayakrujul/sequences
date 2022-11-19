@@ -85,7 +85,7 @@ def run(code, _stack=(), _lst=()):
                 stack.push(''.join(reversed(a)))
         elif char == 'D':
             stack.push(list(set(stack.first(list))))
-        elif char == 'p':
+        elif char == 'r':
             a, b = stack.first(str, n=2)
             stack.push(b.split(a))
         elif char == 'J':
