@@ -68,7 +68,7 @@ def run(code, _stack=(), _lst=()):
             stack.push(gcd(stack.first(list)))
         elif char == 'L':
             stack.push(lcm(stack.first(list)))
-        elif char == 'a':
+        elif char == 'k':
             stack.push(statistics.mean(stack.first(list) or [0]))
         elif char == 'l':
             stack.push([])
@@ -146,7 +146,7 @@ def run(code, _stack=(), _lst=()):
         elif char == '%':
             b, a = stack.first((int, float), n=2)
             stack.push(a % b)
-        elif char == 'D':
+        elif char == 'K':
             b, a = stack.first((int, float), n=2)
             stack.remove(a)
             stack.remove(b)
