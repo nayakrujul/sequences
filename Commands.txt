@@ -5,6 +5,8 @@ Inputs:
   I = list of integer input
   t = string input
   T = list of string input
+  ( = push the list of all explicit inputs taken
+  ) = push the last explicit input taken
 
 Lists:
   S = sum the list
@@ -76,3 +78,6 @@ Stacks:
   h = push last item in sequence list
   H = append to sequence list
   
+Variables:
+  U = assign to u
+  u = push u
