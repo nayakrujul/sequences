@@ -29,13 +29,16 @@ def run(code, _stack=(), _lst=(), u=None, _inputs=()):
             except:
                 pass
             index -= 1
-            while string[0] == '0':
-                stack.push(0)
-                try:
-                    string = string[1:]
-                except:
-                    break
-            stack.push(eval(string))
+            try:
+                while string[0] == '0':
+                    stack.push(0)
+                    try:
+                        string = string[1:]
+                    except:
+                        break
+                stack.push(eval(string))
+            except:
+                pass
         elif char == '"':
             string = char
             index += 1
