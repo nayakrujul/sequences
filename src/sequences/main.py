@@ -308,7 +308,7 @@ def run(code, _stack=(), _lst=(), u=None, _inputs=()):
             stack.push(list(inputs).copy())
         elif char == ')':
             stack.push(inputs[0])
-        elif char == '!':
+        elif char == '`':
             index += 1
             string = code[index]
             a = stack.first((list, str))
