@@ -308,6 +308,15 @@ def run(code, _stack=(), _lst=(), u=None, _inputs=()):
             stack.push(list(inputs).copy())
         elif char == ')':
             stack.push(inputs[0])
+        elif char == '_':
+            index += 1
+            string = code[index]
+            a = stack.first((list, str))
+            l = []
+            for i in a:
+                stack, lst = run(string, [i] + stack, lst, u, inputs)
+                l.append(stack[0])
+            stack.push(l)
         else:
             if isinstance(stack[0], str):
                 stack[0] += code[index]
